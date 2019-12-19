@@ -1,0 +1,7 @@
+pyinstaller --onefile "main.py" -i icon\pizza.ico
+
+---------------------------------------------------------------------------------------
+pip Pyinstaller
+
+--onefile deixa o sistema em um unico arquivo estilo software portail
+-i direciona um icone para o sistema
