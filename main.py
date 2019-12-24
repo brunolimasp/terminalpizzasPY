@@ -19,16 +19,29 @@ def logo():
 
 def TipoDeUsuario():
     while True:
+        logo()
         TipoLogin = int(input('\t\t[1] USUARIO COMUM              [0] Administrador \n'))
         if TipoLogin == 1:
             logo()
             menu.MenuPrincipal()
+            break
         elif TipoLogin == 0:
             logo()
             menu.MenuPrincipal()
+            break
         else:
-            print("OPCAO INCORRETA!!\n TENTE NOVAMNETE!!")
             os.system("cls")
+            logo()
+            print("OPCAO INCORRETA!!\n TENTE NOVAMENTE!!")
+            sleep(2)
+            os.system("cls")
+
+
+
+def ValidacaoComum():
+    banco = open('Usuarios.txt', 'r') #ABRE O ARQUIVO
+    print (banco.read()) #LE O ARQUIVO
+
 
 
 logo()
