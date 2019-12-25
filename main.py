@@ -14,19 +14,15 @@ def logo():
     print("\t   ##    ##       ##    ##  ##     ##  ##  ##   ### ##     ## ##\n")
     print("\t   ##    ######## ##     ## ##     ## #### ##    ## ##     ## ########\n\n")
     print("\t >PIZZAS_\n\n\n")
-    sleep(1)
 
 
 def TipoDeUsuario():
     while True:
-        logo()
         TipoLogin = int(input('\t\t[1] USUARIO COMUM              [0] Administrador \n'))
         if TipoLogin == 1:
-            logo()
-            menu.MenuPrincipal()
+            ValidacaoComum()
             break
         elif TipoLogin == 0:
-            logo()
             menu.MenuPrincipal()
             break
         else:
@@ -38,10 +34,23 @@ def TipoDeUsuario():
 
 
 
-def ValidacaoComum():
-    banco = open('Usuarios.txt', 'r') #ABRE O ARQUIVO
-    print (banco.read()) #LE O ARQUIVO
 
+def ValidacaoComum():
+    logo()
+    banco = open('banco/Usuarios.txt', 'r')  # ABRE O ARQUIVO
+    lista = banco.read().split()  # TRANSFORMA EM LISTA
+
+    while True:
+        usuario = input(str('################# USUARIO #################\n'))
+        validador = (usuario in lista)
+        if validador == True:
+            Senha = input(str('#################   SENHA   #################\n'))
+            validador = (Senha in lista)
+            if validador == True:
+                menu.MenuPrincipal()
+                break
+        else:
+            print('SENHA INCORRETA!!\n TENTE NOVAMENTE')
 
 
 logo()
