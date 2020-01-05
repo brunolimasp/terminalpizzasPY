@@ -3,12 +3,14 @@ import os
 
 
 def MenuCadastro():
-    os.system("cls")
     Logo.logo()
+    Logo.limpeza()
+
     print('>MENU PRINCIPAL\\ESTOQUE DE PRODUTOS')
-    print(50 * '#')
+    Logo.linha()
     print('\t\tESTOQUE DE PRODUTOS')
-    print(50 * '#')
+    Logo.linha()
+
 
     while True:
         escolha = int(input(('[1] PIZZA'

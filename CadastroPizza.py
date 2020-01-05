@@ -1,15 +1,51 @@
 import Logo
 import os
+from time import sleep
 
-#def pizza_cadastro():
+
+
+
+def pizza_cadastro():
+    os.system("cls")
+    Logo.logo()
+    print('>MENU PRINCIPAL\\ESTOQUE DE PRODUTOS\\PIZZA\\CADASTRAR')
+    Logo.linha()
+    print('\t\tCADASTRAR')
+    Logo.linha()
+    
+    while True:  
+        sabor = input('SABOR: ')
+        codigo = input('CÓDIGO: ')
+        quant = input('QUANTIDADE: ')
+        preço = input('PREÇO: ')
+        Logo.linha()
+
+        estoque = open('banco\estoquepizza.txt', 'a')
+        estoque.write('\nsabor:'+ sabor + '\n' + 'codigo:'+ codigo + '\n' + 'quant:'+ quant + '\n' + 'preco:'+ preço + '\n' )
+        estoque.write(15 *'-')
+        estoque.close()
+    
+        print(f'SABOR DA PIZZA: {sabor}') 
+        print(f'CÓDIGO DA PIZZA: {codigo}')
+        print(f'QUANTIDADE: {quant}')
+        print(f'PREÇO DA PIZZA: {preço}')
+        Logo.linha()
+        opc = int(input('\tDESEJA CADASTRAR OUTRO PRODUTO?'
+                        '\n\t[1] SIM' 
+                        '\n\t[2] NÃO'
+                        '\n\t->' ))
+        Logo.linha()           
+        if opc == 2:
+            PizzaMenu()
+
 
 
 def PizzaMenu():
     Logo.logo()
     print('>MENU PRINCIPAL\\ESTOQUE DE PRODUTOS\\PIZZA')
-    print(50 * '#')
+    Logo.linha()
     print('\t\tCADASTRO - PIZZA')
-    print(50 * '#')
+    Logo.linha()
 
     while True:
         escolha = int(input(('[1] CADASTRAR'
@@ -18,7 +54,8 @@ def PizzaMenu():
                            '\n->')))
         if escolha == 1:
             os.system("cls")
-            #def pizza_cadastro()
+            pizza_cadastro()
+
             break
         elif escolha == 2:
             os.system("cls")
