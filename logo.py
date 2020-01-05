@@ -1,7 +1,7 @@
 import os
 import sys
 
-def logo():
+def Logo():
     os.system("cls")
     print("\n\n\n\t\t\t\t    1.0 B",)
     print("\t\t\t\tVERSAO PYTHON")

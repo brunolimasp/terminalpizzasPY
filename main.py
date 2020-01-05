@@ -22,8 +22,8 @@ def login1 ():
     c = Validador('','')
     c.ValidacaoComum()
 
-logo = logo.Logo()
-logo.logo()
+logo.Logo()
+
 
 TipoDeUsuario()
 

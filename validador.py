@@ -20,3 +20,4 @@ class Validador():
                 logo
                 print('USUARIO OU SENHA INCORRETA\n TENTE NOVAMENTE')
                 time.sleep(1)
+            
