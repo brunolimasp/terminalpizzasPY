@@ -1,7 +1,7 @@
 import os
 import sys
 
-def Logo():
+def logo():
     os.system("cls")
     print("\n\n\n\t\t\t\t    1.0 B",)
     print("\t\t\t\tVERSAO PYTHON")
@@ -16,7 +16,7 @@ def Logo():
 
 # Print de linhas para estetica do sistema
 def linha():
-    print(55 * '#')
+    print(100 * '#')
 
 def limpeza():
     import sys

@@ -1,11 +1,14 @@
 from time import sleep
 from validador import *
-import logo
+import Logo
 
 
 def TipoDeUsuario():
     while True:
-        TipoLogin = int(input('\t\t[1] USUARIO COMUM              [0] Administrador \n'))
+        Logo.linha()
+        TipoLogin = int(input('\t\t\t[1] USUARIO COMUM              [0] Administrador \n'
+                                                       '\t\t\t->'))
+                                                       
         if TipoLogin == 1:
             login1()
             break
@@ -13,17 +16,16 @@ def TipoDeUsuario():
             login1()
             break
         else:
-            os.system("cls")
+            Logo.limpeza()
             print("OPCAO INCORRETA!!\n TENTE NOVAMENTE!!")
             sleep(2)
-            os.system("cls")
+            Logo.limpeza()
 
 def login1 ():
     c = Validador('','')
     c.ValidacaoComum()
 
-logo.Logo()
-
+Logo.logo()
 
 TipoDeUsuario()
 
