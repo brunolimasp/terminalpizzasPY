@@ -36,9 +36,10 @@ def MenuCadastro():
 
         elif escolha == 4:
             os.system("cls")
-            
-            
+            import MenuPrincipal
+            MenuPrincipal.Menu()
             break
+        
         else:
             os.system("cls")
             print('OPÇÃO INVALIDA!')
