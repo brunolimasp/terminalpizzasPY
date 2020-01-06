@@ -2,6 +2,7 @@ import Logo
 
 
 def Menu():
+    Logo.limpeza()
     Logo.logo()
     print('>MENU PRINCIPAL')
     Logo.linha()
