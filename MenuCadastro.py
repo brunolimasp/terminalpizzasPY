@@ -8,7 +8,7 @@ def MenuCadastro():
 
     print('>MENU PRINCIPAL\\ESTOQUE DE PRODUTOS')
     Logo.linha()
-    print('\t\tESTOQUE DE PRODUTOS')
+    print('\t\t\tESTOQUE DE PRODUTOS')
     Logo.linha()
 
 

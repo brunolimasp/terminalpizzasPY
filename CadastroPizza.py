@@ -2,7 +2,44 @@ import Logo
 import os
 from time import sleep
 
+def listar():
+    Logo.linha()
+    ler = open('banco\estoquepizza.txt', 'r')
+    print(ler.readlines())
+    ler.seek(0)
+    Logo.linha()
+    ler.close()
+    
 
+def pizza_editar():
+    Logo.limpeza()
+    Logo.logo()
+    print('>MENU PRINCIPAL\\ESTOQUE DE PRODUTOS\\PIZZA\\LISTAR / EDITAR')
+    Logo.linha()
+    print('\t\tLISTAR / EDITAR')
+    Logo.linha()
+    while True:
+        escolha = int(input(('[1] LISTAR'
+                           '\n[2] EDITAR'
+                           '\n[3] VOLTAR'
+                           '\n->')))
+        if escolha == 1:
+            Logo.limpeza()
+            Logo.logo()
+            listar()
+            break
+        elif escolha == 2:
+            Logo.limpeza()
+            Logo.logo()
+            break
+        elif escolha == 3:
+            Logo.limpeza()
+            Logo.logo()
+
+            break
+        else:
+            Logo.limpeza()
+            print('OPÇÃO INVALIDA!')
 
 
 def pizza_cadastro():
@@ -41,7 +78,7 @@ def PizzaMenu():
     Logo.logo()
     print('>MENU PRINCIPAL\\ESTOQUE DE PRODUTOS\\PIZZA')
     Logo.linha()
-    print('\t\tCADASTRO - PIZZA')
+    print('\t\t\tCADASTRO - PIZZA')
     Logo.linha()
 
     while True:
@@ -50,21 +87,18 @@ def PizzaMenu():
                            '\n[3] VOLTAR'
                            '\n->')))
         if escolha == 1:
-            os.system("cls")
+            Logo.limpeza()
             pizza_cadastro()
-
             break
         elif escolha == 2:
-            os.system("cls")
-            #CadBebidas
-            print('2')
+            Logo.limpeza()
+            pizza_editar()
             break
         elif escolha == 3:
-            os.system("cls")
+            Logo.limpeza()
             import MenuCadastro
-            MenuCadastro.MenuCadastro
-            print('3')
+            MenuCadastro.MenuCadastro()
             break
         else:
-            os.system("cls")
+            Logo.limpeza()
             print('OPÇÃO INVALIDA!')
