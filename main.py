@@ -2,8 +2,9 @@ from time import sleep
 from validador import *
 import Logo
 
-
 def TipoDeUsuario():
+    Logo.limpeza()
+    Logo.logo()
     while True:
         Logo.linha()
         TipoLogin = int(input('\t\t\t[1] USUARIO COMUM              [0] Administrador \n'
@@ -24,8 +25,6 @@ def TipoDeUsuario():
 def login1 ():
     c = Validador('','')
     c.ValidacaoComum()
-
-Logo.logo()
 
 TipoDeUsuario()
 

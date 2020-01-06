@@ -19,29 +19,26 @@ def MenuCadastro():
                            '\n[4] VOLTAR'
                            '\n->')))
         if escolha == 1:
-            os.system("cls")
+            Logo.limpeza()
             import CadastroPizza
             CadastroPizza.PizzaMenu()
             break
         
         elif escolha == 2:
-            os.system("cls")
-            #CadastroCervejas  
+            Logo.limpeza()  
             break
 
         elif escolha == 3:
-            os.system("cls")
-            #CadastroCervejas
+            Logo.limpeza()
             break
 
         elif escolha == 4:
-            os.system("cls")
+            Logo.limpeza()
             import MenuPrincipal
             MenuPrincipal.Menu()
             break
         
         else:
-            os.system("cls")
+            Logo.limpeza()
             print('OPÇÃO INVALIDA!')
 
-MenuCadastro()
