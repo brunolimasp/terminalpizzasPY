@@ -14,7 +14,7 @@ def TipoDeUsuario():
             login1()
             break
         elif TipoLogin == 0:
-            login1()
+            login0()
             break
         else:
             Logo.limpeza()
@@ -25,6 +25,16 @@ def TipoDeUsuario():
 def login1 ():
     c = Validador('','')
     c.ValidacaoComum()
+
+
+def login0():
+    c = ValidadorAdm('','')
+    c.ValidacaoAdm()
+
+
+
+
+
 
 TipoDeUsuario()
 
