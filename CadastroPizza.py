@@ -29,7 +29,9 @@ def pizza_cadastro():
         print(f'CÓDIGO DA PIZZA: {codigo}')
         print(f'QUANTIDADE: {quant}')
         print(f'PREÇO DA PIZZA: {preço}')
+        
         Logo.linha()
+        
         opc = int(input('DESEJA CADASTRAR OUTRO PRODUTO? [1]SIM [2]NÃO'
                         '\n->' ))
         Logo.linha()           
