@@ -89,7 +89,8 @@ def pizza_editar():
             break
 
         elif escolha == 3:
-            Logo.limpeza()
+            import CadastroPizza
+            CadastroPizza.PizzaMenu()
             break
 
         else:

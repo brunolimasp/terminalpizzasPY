@@ -7,9 +7,10 @@ def TipoDeUsuario():
     Logo.logo()
     while True:
         Logo.linha()
-        TipoLogin = int(input('\t\t\t[1] USUARIO COMUM              [0] Administrador \n'
-                                                       '\t\t\t->'))
-                                                       
+        print('\t\t\t[1] USUARIO COMUM              [0] Administrador')
+        print('####################################################################################################')
+        TipoLogin = int(input('-------------> '.rjust(48).ljust(48)))
+        print(end='')
         if TipoLogin == 1:
             login1()
             break
@@ -23,11 +24,13 @@ def TipoDeUsuario():
             Logo.limpeza()
 
 def login1 ():
+    Logo.limpeza()
     c = Validador('','')
     c.ValidacaoComum()
 
 
 def login0():
+    Logo.limpeza()
     c = ValidadorAdm('','')
     c.ValidacaoAdm()
 
