@@ -12,9 +12,9 @@ class Validador():
         lista = banco.read().split()  # TRANSFORMA EM LISTA
         while True:
             self.usuario = input(str('\t\t\t################# USUARIO #################\n'
-                                     '\t\t\t->'))
-            self.senha = input(str('\t\t\t#################   SENHA  #################\n'
-                                   '\t\t\t->'))
+                                     '\t\t\t'.ljust(68)))
+            self.senha = input(str('\t\t\t#################  SENHA  #################\n'
+                                   '\t\t\t'.ljust(68)))
             validador = (self.usuario in lista)
             validadorSenha = (self.senha in lista)
             if (validador == True) and (validadorSenha == True):

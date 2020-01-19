@@ -15,14 +15,16 @@ def pizza_cadastro():
     Logo.linha()
     
     while True:  
-        sabor = input('SABOR: ')
+        sabor = input('SABOR: ').upper()
         codigo = input('CÓDIGO: ')
         quant = input('QUANTIDADE: ')
-        preço = input('PREÇO: ')
+        preço = float(input('PREÇO: '))
+        
+        
         Logo.linha()
 
         estoque = open('banco\estoquepizza.txt', 'a')
-        estoque.write(sabor + '\n' + codigo + '\n' + quant + '\n' + preço + '\n' )
+        estoque.write(sabor + '\n' + codigo + '\n' + quant + '\n' + str(preço) + '\n' )
         estoque.close()
     
         print(f'SABOR DA PIZZA: {sabor}') 
