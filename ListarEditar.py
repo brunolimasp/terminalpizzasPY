@@ -13,21 +13,20 @@ def editar():
     
     ler = open('banco\estoquepizza.txt', 'r')
     cont = 0
+
     for linha1 in ler:
         cont = cont + 1 
     ler.seek(0)
     cont = cont // 4
-
-    for linha in range(0, cont):  
-        print('SABOR:',ler.readline().rstrip())
-        print('CÓDIGO:',ler.readline().rstrip())
-        print('QUANTIDADE:',ler.readline().rstrip())
-        print('PREÇO:',ler.readline().rstrip())
-        print('--------------------------------')
+    print('| CÓDIGO'.rjust(2).ljust(2),'| SABOR'.ljust(25),'| QUANTIDADE'.ljust(14).rjust(5),'| PREÇO'.ljust(8),'|')
+    print('------------------------------------------------------------')
+    for linha in range(0, cont): 
+        linha += 1 
+        print(f'|{ler.readline().rstrip().rjust(4).ljust(8)}|',f'{ler.readline().rstrip().ljust(24)}|',f'{ler.readline().rstrip().rjust(5).ljust(13)}|',f'{ler.readline().rstrip().rjust(5).ljust(7)}|')
+    print('------------------------------------------------------------')
     ler.close()
-
     opc = int(input('DESEJA SAIR? [1]SIM [2]NÃO'
-                        '\n->' ))
+                    '\n->' ))
     Logo.linha()           
     if opc == 1:
         pizza_editar()
@@ -51,12 +50,12 @@ def listar():
             cont = cont + 1 
         ler.seek(0)
         cont = cont // 4
-        print('COD','| SABOR'.ljust(25),'| CÓDIGO'.rjust(5).ljust(14),'| QUANTIDADE'.ljust(14).rjust(5),'| PREÇO'.ljust(8),'|')
-        print('----------------------------------------------------------------------')
+        print('| CÓDIGO'.rjust(2).ljust(2),'| SABOR'.ljust(25),'| QUANTIDADE'.ljust(14).rjust(5),'| PREÇO'.ljust(8),'|')
+        print('------------------------------------------------------------')
         for linha in range(0, cont): 
             linha += 1 
-            print(f' {linha}  |',f'{ler.readline().rstrip().ljust(24)}|',f'{ler.readline().rstrip().rjust(5).ljust(13)}|',f'{ler.readline().rstrip().rjust(5).ljust(13)}|',f'{ler.readline().rstrip().rjust(5).ljust(7)}|')
-        print('----------------------------------------------------------------------')
+            print(f'|{ler.readline().rstrip().rjust(4).ljust(8)}|',f'{ler.readline().rstrip().ljust(24)}|',f'{ler.readline().rstrip().rjust(5).ljust(13)}|',f'{ler.readline().rstrip().rjust(5).ljust(7)}|')
+        print('------------------------------------------------------------')
         ler.close()
         opc = int(input('DESEJA SAIR? [1]SIM [2]NÃO'
                         '\n->' ))
